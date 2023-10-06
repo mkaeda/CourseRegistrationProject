@@ -1,25 +1,11 @@
 package main.id;
 
-public class PersonId
+public class PersonId extends Identifier
 {
-    private String value;
+    private static final String format = "^P\\d{3}$";
 
     public PersonId(String idNumber)
     {
-        if (idNumber == null)
-        {
-            throw new NullPointerException("idNumber");
-        }
-        
-        if (!idNumber.matches("^\\d{3}$"))
-        {
-            throw new IllegalArgumentException("idNumber must be a three-digit numeric value");
-        }
-        this.value = "P".concat(idNumber);
-    }
-
-    public String getValue()
-    {
-        return this.value;
+        super(format, idNumber);       
     }
 }

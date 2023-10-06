@@ -15,13 +15,13 @@ public class StudentTest
     @Before
     public void setUp()
     {
-        student = new Student(new PersonId("001"), "John", "Doe");
+        student = new Student(new PersonId("P001"), "John", "Doe");
     }
 
     @Test
     public void testGetId()
     {
-        assertEquals("S001", student.getId().getValue());
+        assertEquals("P001", student.getId().getValue());
     }
 
     @Test

@@ -11,7 +11,7 @@ public class CourseCodeTest
     @Test
     public void testValidCourseCode()
     {
-        CourseCode courseCode = new CourseCode("123");
+        CourseCode courseCode = new CourseCode("C123");
         assertEquals("C123", courseCode.getValue());
     }
     

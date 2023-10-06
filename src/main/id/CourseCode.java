@@ -1,25 +1,11 @@
 package main.id;
 
-public class CourseCode
+public class CourseCode extends Identifier
 {
-    private String value;
-    
+    private static final String format = "^C\\d{3}$";
+
     public CourseCode(String courseNumber)
     {
-        if (courseNumber == null)
-        {
-            throw new NullPointerException("courseNumber");
-        }
-        
-        if (!courseNumber.matches("^\\d{3}$"))
-        {
-            throw new IllegalArgumentException("courseNumber must be a three-digit numeric value");
-        }
-        this.value = "C".concat(courseNumber);
-    }
-    
-    public String getValue()
-    {
-        return this.value;
+        super(format, courseNumber);       
     }
 }

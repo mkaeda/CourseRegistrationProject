@@ -22,10 +22,10 @@ public class CourseTest
     @Before
     public void setUp()
     {
-        student1 = new Student(new PersonId("001"), "Easter", "Bunny");
-        student2 = new Student(new PersonId("002"), "Santa", "Claus");
-        student3 = new Student(new PersonId("003"), "Tooth", "Fairy");
-        course   = new Course(new CourseCode("001"), "Mathematics", 2);
+        student1 = new Student(new PersonId("P001"), "Easter", "Bunny");
+        student2 = new Student(new PersonId("P002"), "Santa", "Claus");
+        student3 = new Student(new PersonId("P003"), "Tooth", "Fairy");
+        course   = new Course(new CourseCode("C001"), "Mathematics", 2);
     }
 
     @Test

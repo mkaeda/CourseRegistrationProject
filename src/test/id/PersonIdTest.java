@@ -11,7 +11,7 @@ public class PersonIdTest
     @Test
     public void testValidCourseCode()
     {
-        PersonId id = new PersonId("123");
+        PersonId id = new PersonId("P123");
         assertEquals("P123", id.getValue());
     }
 
