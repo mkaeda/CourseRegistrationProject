@@ -1,6 +1,6 @@
 package main.person;
 
-import main.id.PersonId;
+import main.id.StudentId;
 
 /**
  * Represents a student in an educational institution.
@@ -17,7 +17,7 @@ public class Student extends Person
      * @param lastName
      *                  The last name of the student.
      */
-    public Student(PersonId id, String firstName, String lastName)
+    public Student(StudentId id, String firstName, String lastName)
     {
         super(id, firstName, lastName);
     } 

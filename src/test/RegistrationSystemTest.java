@@ -12,7 +12,7 @@ import org.junit.Test;
 import main.RegistrationSystem;
 import main.course.Course;
 import main.id.CourseCode;
-import main.id.PersonId;
+import main.id.StudentId;
 import main.person.Student;
 
 public class RegistrationSystemTest
@@ -26,9 +26,9 @@ public class RegistrationSystemTest
     @Before
     public void setUp()
     {
-        student1           = new Student(new PersonId("P001"), "Easter", "Bunny");
-        student2           = new Student(new PersonId("P002"), "Santa", "Claus");
-        student3           = new Student(new PersonId("P003"), "Tooth", "Fairy");
+        student1           = new Student(new StudentId("S001"), "Easter", "Bunny");
+        student2           = new Student(new StudentId("S002"), "Santa", "Claus");
+        student3           = new Student(new StudentId("S003"), "Tooth", "Fairy");
         course1            = new Course(new CourseCode("C001"), "Mathematics", 2);
         course2            = new Course(new CourseCode("C002"), "Calculus", 2);
         registrationSystem = new RegistrationSystem();
