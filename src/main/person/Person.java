@@ -1,19 +1,21 @@
 package main.person;
 
+import main.id.PersonId;
+
 public abstract class Person
 {
-    private String id;
+    private PersonId id;
     private String firstName;
     private String lastName;
 
-    public Person(String id, String firstName, String lastName)
+    public Person(PersonId id, String firstName, String lastName)
     {
         this.id        = id;
         this.firstName = firstName;
         this.lastName  = lastName;
     }
 
-    public String getId()
+    public PersonId getId()
     {
         return this.id;
     }

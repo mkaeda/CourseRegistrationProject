@@ -5,6 +5,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
+import main.id.PersonId;
 import main.person.Student;
 
 public class StudentTest
@@ -14,13 +15,13 @@ public class StudentTest
     @Before
     public void setUp()
     {
-        student = new Student("S001", "John", "Doe");
+        student = new Student(new PersonId("001"), "John", "Doe");
     }
 
     @Test
     public void testGetId()
     {
-        assertEquals("S001", student.getId());
+        assertEquals("S001", student.getId().getValue());
     }
 
     @Test

@@ -10,26 +10,28 @@ import org.junit.Before;
 import org.junit.Test;
 
 import main.course.Course;
+import main.id.CourseCode;
+import main.id.PersonId;
 import main.person.Student;
 
 public class CourseTest
 {
-    private Course                  course;
-    private Student                 student1, student2, student3;
-    
+    private Course  course;
+    private Student student1, student2, student3;
+
     @Before
     public void setUp()
     {
-        student1  = new Student("S001", "Easter", "Bunny");
-        student2  = new Student("S002", "Santa", "Claus");
-        student3  = new Student("S003", "Tooth", "Fairy");
-        course    = new Course("C001", "Mathematics", 2);
+        student1 = new Student(new PersonId("001"), "Easter", "Bunny");
+        student2 = new Student(new PersonId("002"), "Santa", "Claus");
+        student3 = new Student(new PersonId("003"), "Tooth", "Fairy");
+        course   = new Course(new CourseCode("001"), "Mathematics", 2);
     }
 
     @Test
     public void testGetCode()
     {
-        assertEquals("C001", course.getCode());
+        assertEquals("C001", course.getCode().getValue());
     }
 
     @Test
@@ -54,37 +56,37 @@ public class CourseTest
     public void testEnrollStudent()
     {
         List<Student> students;
-        
+
         assertTrue(course.enrollStudent(student1));
-        
+
         students = course.getEnrolledStudents();
         assertEquals(1, students.size());
         assertEquals(student1, students.get(0));
-        
+
         assertTrue(course.enrollStudent(student2));
-        
+
         students = course.getEnrolledStudents();
         assertEquals(2, course.getEnrolledStudents().size());
         assertEquals(student1, students.get(0));
         assertEquals(student2, students.get(1));
-        
+
         assertFalse(course.enrollStudent(student3));
     }
-    
+
     @Test
     public void testUnenrollStudent()
     {
         List<Student> students;
-        
+
         assertTrue(course.enrollStudent(student1));
         assertTrue(course.enrollStudent(student2));
-        
-        assertTrue(course.unenrollStudent(student1));     
+
+        assertTrue(course.unenrollStudent(student1));
 
         students = course.getEnrolledStudents();
         assertEquals(1, students.size());
         assertEquals(student2, students.get(0));
-        
+
         assertFalse(course.unenrollStudent(student3));
     }
 }

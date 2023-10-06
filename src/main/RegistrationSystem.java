@@ -41,7 +41,7 @@ public class RegistrationSystem
      */
     public void addCourse(Course course)
     {
-        courses.put(course.getCode(), course);
+        courses.put(course.getCode().getValue(), course);
     }
 
     /**

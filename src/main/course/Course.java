@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import main.id.CourseCode;
 import main.person.Student;
 
 /**
@@ -11,7 +12,7 @@ import main.person.Student;
  */
 public class Course
 {
-    private String        code;
+    private CourseCode    code;
     private String        name;
     private int           capacity;
     private List<Student> enrolledStudents;
@@ -36,7 +37,7 @@ public class Course
      * @param year
      *                  The year in which the course is offered.
      */
-    public Course(String code, String name, int capacity)
+    public Course(CourseCode code, String name, int capacity)
     {
         this.code             = code;
         this.name             = name;
@@ -49,7 +50,7 @@ public class Course
      *
      * @return The course code.
      */
-    public String getCode()
+    public CourseCode getCode()
     {
         return code;
     }
