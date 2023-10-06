@@ -11,7 +11,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import main.course.Course;
-import main.course.Semester;
 import main.person.Professor;
 import main.person.Student;
 import main.person.TeachingAssistant;
@@ -31,7 +30,7 @@ public class CourseTest
         student1  = new Student("S001", "Easter", "Bunny");
         student2  = new Student("S002", "Santa", "Claus");
         student3  = new Student("S003", "Tooth", "Fairy");
-        course    = new Course("C001", "Mathematics", 2, professor, tas, Semester.FALL, 2023);
+        course    = new Course("C001", "Mathematics", 2);
     }
 
     @Test

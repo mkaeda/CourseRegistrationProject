@@ -40,8 +40,7 @@ public class Course
      * @param year
      *                  The year in which the course is offered.
      */
-    public Course(String code, String name, int capacity, Professor professor, List<TeachingAssistant> tas,
-            Semester semester, int year)
+    public Course(String code, String name, int capacity)
     {
         this.code             = code;
         this.name             = name;

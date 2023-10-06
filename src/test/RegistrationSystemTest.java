@@ -1,19 +1,20 @@
 package test;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Before;
 import org.junit.Test;
 
 import main.RegistrationSystem;
 import main.course.Course;
-import main.course.Semester;
 import main.person.Professor;
 import main.person.Student;
 import main.person.TeachingAssistant;
-
-import static org.junit.Assert.*;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class RegistrationSystemTest
 {
@@ -32,8 +33,8 @@ public class RegistrationSystemTest
         student1           = new Student("S001", "Easter", "Bunny");
         student2           = new Student("S002", "Santa", "Claus");
         student3           = new Student("S003", "Tooth", "Fairy");
-        course1            = new Course("C001", "Mathematics", 2, professor, tas, Semester.FALL, 2023);
-        course2            = new Course("C002", "Calculus", 2, professor, tas, Semester.FALL, 2023);
+        course1            = new Course("C001", "Mathematics", 2);
+        course2            = new Course("C002", "Calculus", 2);
         registrationSystem = new RegistrationSystem();
         registrationSystem.addCourse(course1);
     }
