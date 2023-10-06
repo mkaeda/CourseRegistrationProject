@@ -4,29 +4,22 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import main.course.Course;
-import main.person.Professor;
 import main.person.Student;
-import main.person.TeachingAssistant;
 
 public class CourseTest
 {
     private Course                  course;
     private Student                 student1, student2, student3;
-    private Professor               professor;
-    private List<TeachingAssistant> tas;
-
+    
     @Before
     public void setUp()
     {
-        professor = new Professor("P001", "John", "Smith");
-        tas       = new ArrayList<>();
         student1  = new Student("S001", "Easter", "Bunny");
         student2  = new Student("S002", "Santa", "Claus");
         student3  = new Student("S003", "Tooth", "Fairy");
@@ -49,19 +42,6 @@ public class CourseTest
     public void testGetCapacity()
     {
         assertEquals(2, course.getCapacity());
-    }
-
-    @Test
-    public void testGetProfessor()
-    {
-        assertEquals(professor, course.getProfessor());
-    }
-
-    @Test
-    public void testGetTeachingAssistants()
-    {
-        assertEquals(tas, course.getTeachingAssistants());
-        assertTrue(course.getTeachingAssistants().isEmpty());
     }
 
     @Test

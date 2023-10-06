@@ -4,7 +4,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Before;
@@ -12,9 +11,7 @@ import org.junit.Test;
 
 import main.RegistrationSystem;
 import main.course.Course;
-import main.person.Professor;
 import main.person.Student;
-import main.person.TeachingAssistant;
 
 public class RegistrationSystemTest
 {
@@ -27,9 +24,6 @@ public class RegistrationSystemTest
     @Before
     public void setUp()
     {
-        Professor               professor = new Professor("P001", "John", "Smith");
-        List<TeachingAssistant> tas       = new ArrayList<>();
-
         student1           = new Student("S001", "Easter", "Bunny");
         student2           = new Student("S002", "Santa", "Claus");
         student3           = new Student("S003", "Tooth", "Fairy");

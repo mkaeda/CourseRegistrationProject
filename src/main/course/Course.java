@@ -4,21 +4,17 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import main.person.Professor;
 import main.person.Student;
-import main.person.TeachingAssistant;
 
 /**
  * Represents a course offered within an educational institution.
  */
 public class Course
 {
-    private String                  code;
-    private String                  name;
-    private int                     capacity;
-    private Professor               professor;
-    private List<TeachingAssistant> tas;
-    private List<Student>           enrolledStudents;
+    private String        code;
+    private String        name;
+    private int           capacity;
+    private List<Student> enrolledStudents;
 
     /**
      * Constructs a new course.
@@ -45,8 +41,6 @@ public class Course
         this.code             = code;
         this.name             = name;
         this.capacity         = capacity;
-        this.professor        = professor;
-        this.tas              = tas;
         this.enrolledStudents = new ArrayList<>();
     }
 
@@ -78,26 +72,6 @@ public class Course
     public int getCapacity()
     {
         return capacity;
-    }
-
-    /**
-     * Gets the professor responsible for teaching the course.
-     *
-     * @return The course professor.
-     */
-    public Professor getProfessor()
-    {
-        return professor;
-    }
-
-    /**
-     * Gets an unmodifiable list of teaching assistants associated with the course.
-     *
-     * @return The list of teaching assistants.
-     */
-    public List<TeachingAssistant> getTeachingAssistants()
-    {
-        return Collections.unmodifiableList(tas);
     }
 
     /**
