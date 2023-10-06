@@ -21,21 +21,11 @@ public class Course
      * Constructs a new course.
      *
      * @param code
-     *                  The course code or identifier.
+     *                 The course code or identifier.
      * @param name
-     *                  The name or title of the course.
+     *                 The name or title of the course.
      * @param capacity
-     *                  The maximum number of students that can enroll in the
-     *                  course.
-     * @param professor
-     *                  The professor responsible for teaching the course.
-     * @param tas
-     *                  The list of teaching assistants associated with the course.
-     * @param semester
-     *                  The semester in which the course is offered (e.g., FALL,
-     *                  WINTER, SPRING, SUMMER).
-     * @param year
-     *                  The year in which the course is offered.
+     *                 The maximum number of students that can enroll in the course.
      */
     public Course(CourseCode code, String name, int capacity)
     {
